@@ -8,7 +8,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-speak("The AI is online. Hello Sir, how can I help you today?")
+speak("The Assistant is online. Hello Sir, how can I help you today?")
 
 def takeCommand():
     r = sr.Recognizer()
