@@ -1,12 +1,13 @@
 import speech_recognition as sr
-import pyttsx3
+import win32com.client
 import time
 
-engine = pyttsx3.init('sapi5')
+speaker = win32com.client.Dispatch("SAPI.SpVoice")
+speaker.Volume = 100
+speaker.Rate = 0
 
 def speak(text):
-    engine.say(text)
-    engine.runAndWait()
+    speaker.Speak(text)
 
 speak("The Assistant is online. Hello Sir, how can I help you today?")
 
